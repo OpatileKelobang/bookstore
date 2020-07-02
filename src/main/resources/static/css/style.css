@@ -22,3 +22,19 @@ body {
 #logo-section {
     padding: 0 15px;
 }
+
+.home-headline {
+    font-size: 24px;
+    color: #ffffff;
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
+    text-transform: capitalize;
+}
+
+.home-headline span {
+    background-color: #231F20;
+    padding: 5px 20px;
+    border-radius: 10px;
+
+}
