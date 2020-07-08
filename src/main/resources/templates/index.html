@@ -2,43 +2,7 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head th:replace="common/header :: common-header"/>
 <body>
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="#">BOOK STORE</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    BOOKS
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Browse Bookshelf</a>
-                    <a class="dropdown-item" href="#">Store hours &#38; Directions</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">FAQ</a>
-                </div>
-            </li>
-            <form class="form-inline">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search books" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </ul>
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="#" id="cart">Shopping Cart</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#" id="my_account">My Account</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#" id="logout">Logout</a>
-            </li>
-        </ul>
-    </div>
-</nav>
+<nav th:replace="common/header :: navbar" />
 
 <main role="main" class="container"> <!--Main Container Start-->
     <div class="row">
@@ -169,12 +133,6 @@
 
 </main><!--Main Container End-->
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/js/vendor/jquery.slim.min.js"><\/script>')</script>
-<script src="/js/bootstrap.bundle.min.js"
-        integrity="sha384-1CmrxMRARb6aLqgBO7yyAxTOQE2AKb9GfXnEo760AUcUmFx3ibVJJAzGytlQcNXd"
-        crossorigin="anonymous"></script>
+<div th:replace="common/header :: footer-scripts" />
 </body>
 </html>
