@@ -50,3 +50,11 @@ body {
 .wood-divider {
     margin-top: 50px;
 }
+
+#account-tabs {
+    margin-top: 50px;
+}
+
+#account-tabs li {
+    margin-right: 25px;
+}
