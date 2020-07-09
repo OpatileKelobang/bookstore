@@ -62,3 +62,7 @@ body {
 #nav-tabContent {
     margin-top: 20px;
 }
+
+.form-group input {
+    margin-top: 20px;
+}
