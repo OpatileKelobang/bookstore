@@ -18,13 +18,13 @@
         <!--NAV PANELS-->
         <nav id="account-tabs" class="col-9 offset-3">
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                <a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Create new account</a>
+                <a th:classappend="${classActiveNewUser}? 'active'" class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Create new account</a>
                 <a th:classappend="${classActiveLogin}? 'active'" class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Log In</a>
-                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Forgot Password</a>
+                <a th:classappend="${classActiveForgotPassword}? 'active'" class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Forgot Password</a>
             </div>
         </nav>
         <!--Create New User-->
-        <div class="tab-content col-9 offset-3" id="nav-tabContent">
+        <div class="tab-content col-9 offset-3" id="nav-tabContent" th:classappend="${classActiveNewUser}? 'in active'">
             <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                 <form>
                     <div class="form-group">
@@ -44,7 +44,7 @@
                     <button type="submit" class="btn btn-primary">Login</button>
                 </form>
             </div>
-            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" th:classappend="${classActiveForgotPassword}? 'in active'">
                 <form>
                     <div class="form-group">
                         <input required="required" type="email" class="form-control" id="recoveryEmail" name="recoveryEmail" placeholder="Email" />
