@@ -23,16 +23,27 @@
                 <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Forgot Password</a>
             </div>
         </nav>
-        <div class="tab-content col- offset-3" id="nav-tabContent">
+        <!--Create New User-->
+        <div class="tab-content col-9 offset-3" id="nav-tabContent">
             <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                 <form>
                     <div class="form-group">
                         <input required="required" type="text" class="form-control" id="newUsername" name="username" placeholder="Username" />
-                        <input required="required" type="text" class="form-control" id="email" name="email" placeholder="Email" />
+                        <input required="required" type="email" class="form-control" id="email" name="email" placeholder="Email" />
                     </div>
+                    <button type="submit" class="btn btn-primary">Create new account</button>
                 </form>
             </div>
-            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">ANOTHER TAB</div>
+            <!--USER LOGIN-->
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                <form>
+                    <div class="form-group">
+                        <input required="required" type="text" class="form-control" id="username" name="username" placeholder="Username" />
+                        <input required="required" type="password" class="form-control" id="loginEmail" name="email" placeholder="Password" />
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+            </div>
             <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">YET ANOTHER TAB</div>
         </div>
     </div>
