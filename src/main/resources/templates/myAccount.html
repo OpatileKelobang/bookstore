@@ -18,8 +18,8 @@
         <!--NAV PANELS-->
         <nav id="account-tabs" class="col-9 offset-3">
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Create new account</a>
-                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Log In</a>
+                <a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Create new account</a>
+                <a th:classappend="${classActiveLogin}? 'active'" class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Log In</a>
                 <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Forgot Password</a>
             </div>
         </nav>
@@ -35,7 +35,7 @@
                 </form>
             </div>
             <!--USER LOGIN-->
-            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" th:classappend="${classActiveLogin}? 'in active'">
                 <form>
                     <div class="form-group">
                         <input required="required" type="text" class="form-control" id="username" name="username" placeholder="Username" />
