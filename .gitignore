@@ -18,7 +18,6 @@ target/
 *.iws
 *.iml
 *.ipr
-za.co.bogote.bookstore.utility.SecurityUtility
 
 ### NetBeans ###
 /nbproject/private/
