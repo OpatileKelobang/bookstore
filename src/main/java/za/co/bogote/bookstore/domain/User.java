@@ -1,7 +1,11 @@
 package za.co.bogote.bookstore.domain;
 
 
+import za.co.bogote.bookstore.domain.security.UserRole;
+
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 public class User {
@@ -18,6 +22,17 @@ public class User {
     private String email;
     private String phone;
     private boolean enabled = true;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private Set<UserRole> userRoles = new HashSet<>();
+
+    public Set<UserRole> getUserRoles() {
+        return userRoles;
+    }
+
+    public void setUserRoles(Set<UserRole> userRoles) {
+        this.userRoles = userRoles;
+    }
 
     public Long getId() {
         return id;
