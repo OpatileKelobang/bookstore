@@ -3,6 +3,10 @@ package za.co.bogote.bookstore.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import za.co.bogote.bookstore.domain.security.PasswordResetToken;
+
+import java.util.Locale;
 
 @Controller
 public class HomeController {
@@ -18,7 +22,12 @@ public class HomeController {
     }
 
     @RequestMapping("/forgotPassword")
-    public String forgotPassword(Model model){
+    public String forgotPassword(
+            Locale locale,
+            @RequestParam("token") String token,
+            Model model) {
+        PasswordResetToken passwordResetToken = userServive.getPasswordResetToken(token);
+
         model.addAttribute("classActiveForgotPassword", true);
         return "myAccount";
     }
