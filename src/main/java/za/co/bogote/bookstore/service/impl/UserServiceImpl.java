@@ -14,7 +14,7 @@ public class UserServiceImpl implements UserService {
     private PasswordResetTokenRepository passwordResetTokenRepository;
 
     @Override
-    public PasswordResetToken getPasswordRestToken(final String token) {
+    public PasswordResetToken getPasswordResetToken(final String token) {
         return passwordResetTokenRepository.findByToken(token);
     }
 
